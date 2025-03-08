@@ -17,7 +17,7 @@ async function onScanSuccess(qrMessage) {
     document.getElementById("reader").style.display = "none";
 
     // Send the scanned flat number to FastAPI backend
-    fetch(`http://127.0.0.1:8000/deduct_member/${qrMessage}`, {
+    fetch(`https://societyapp-us5j.onrender.com/deduct_member/${qrMessage}`, {
         method: "POST"
     })
     .then(response => response.json())
